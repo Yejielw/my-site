@@ -1,0 +1,61 @@
+[debug] [2019-06-12T08:17:19.809Z] ----------------------------------------------------------------------
+[debug] [2019-06-12T08:17:19.811Z] Command:       /usr/local/bin/node /usr/local/bin/firebase deploy --only hosting
+[debug] [2019-06-12T08:17:19.811Z] CLI Version:   6.11.0
+[debug] [2019-06-12T08:17:19.811Z] Platform:      darwin
+[debug] [2019-06-12T08:17:19.811Z] Node Version:  v10.15.3
+[debug] [2019-06-12T08:17:19.812Z] Time:          Wed Jun 12 2019 11:17:19 GMT+0300 (Israel Daylight Time)
+[debug] [2019-06-12T08:17:19.812Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-06-12T08:17:19.823Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-06-12T08:17:19.823Z] > authorizing via signed-in user
+[debug] [2019-06-12T08:17:19.823Z] [iam] checking project yejiel-portfolio for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-06-12T08:17:19.825Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/yejiel-portfolio:testIamPermissions  
+
+[debug] [2019-06-12T08:17:20.855Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-12T08:17:20.857Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/yejiel-portfolio  
+ 
+[debug] [2019-06-12T08:17:21.344Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'yejiel-portfolio'...
+[info] 
+[info] i  deploying hosting
+[debug] [2019-06-12T08:17:22.642Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yejiel-portfolio/versions  
+
+[debug] [2019-06-12T08:17:24.143Z] <<< HTTP RESPONSE 200
+[info] i  hosting[yejiel-portfolio]: beginning deploy...
+[info] i  hosting[yejiel-portfolio]: found 11 files in dist
+[debug] [2019-06-12T08:17:24.156Z] [hosting] hash cache [ZGlzdA] load error: lines is not defined
+[debug] [2019-06-12T08:17:24.178Z] [hosting] hash cache [ZGlzdA] stored for 11 files
+[debug] [2019-06-12T08:17:24.178Z] [hosting][hash queue][FINAL]
+[debug] [2019-06-12T08:17:24.178Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/yejiel-portfolio/versions/1399cd46f8f8682c:populateFiles  
+ <request body omitted>
+[debug] [2019-06-12T08:17:25.557Z] <<< HTTP RESPONSE 200
+[debug] [2019-06-12T08:17:25.560Z] [hosting][populate queue][FINAL]
+[debug] [2019-06-12T08:17:25.560Z] [hosting] uploads queued: 1
+[debug] [2019-06-12T08:17:28.766Z] [hosting][upload queue][FINAL]
+[info] ✔  hosting[yejiel-portfolio]: file upload complete
+[debug] [2019-06-12T08:17:28.767Z] [hosting] deploy completed after 4622ms
+[debug] [2019-06-12T08:17:29.073Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "yejiel-portfolio"
+    },
+    "site": "yejiel-portfolio",
+    "version": "sites/yejiel-portfolio/versions/1399cd46f8f8682c"
+  }
+]
+[info] i  hosting[yejiel-portfolio]: finalizing version...
+[debug] [2019-06-12T08:17:29.074Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/yejiel-portfolio/versions/1399cd46f8f8682c?updateMask=status  
+
